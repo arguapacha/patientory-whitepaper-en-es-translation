@@ -123,6 +123,8 @@ clínico.
 
 2. Visión general del sistema
 
+![Estructura de Patientory][fig_estructura_patientory]
+
 Los problemas actuales se resuelven usando la Red Blockchain Patientory. Los
 sistemas EMR tradicionales son estructuras centralizadas, sujetas a violaciones
 de seguridad, regulaciones estrictas y costos extra muy onerosos. Implementando
@@ -133,4 +135,8 @@ figura se muestra un esquema que describe la infraestructura blockchain de
 Patientory y su interoperabilidad entre pacientes y proveedores
 
 
-  [#Begoyan]: Begoyan, A. "An overview of interoperability standards for electronic health records." USA: society for design and process science (2007).
+
+[#Begoyan]: Begoyan, A. "An overview of interoperability standards for electronic health records." USA: society for design and process science (2007).
+
+[fig_estructura_patientory]: fig_estructura_patientory.png "Estructura de
+Patientory
