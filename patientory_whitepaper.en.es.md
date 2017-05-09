@@ -57,6 +57,7 @@ clínico.
   la entrega de los cuidados de salud, también han resultado en crear silos de
   información de salud, principalmente dentro de los sistemas de registros
   médicos electrónicos (EMR).
+
   Organizaciones gubernamentales y de salud gastan tiempo y dinero significativo
   en la construcción y manejo de sistemas de información tradicionales, así como
   intercambio de datos; requieren recursos para solucionar constantemente
@@ -69,12 +70,14 @@ clínico.
   resultado de esto, los doctores pasan más tiempo escribiendo que hablando con
   sus pacientes. El agotamiento de los médicos pasó de un 45% a un 54% ente 2011
   y 2014[][#Begoyan]
+
   Aunque existe la noción de información de salud individualizada tanto en el
   aspecto clínico como de bienestar, esta no ha sido bien llevada hacia planes
   de cuidado "personalizados". Más aún, aunque hay una gran cantidad de datos,
   el ecosistema de salud en general es incapaz de crear adecuadamente un valor o
   arriesgarse con big data para ayudar a predecir mejor futuros episodios de un
   paciente.
+
   Por tanto, las soluciones actuales generadas por la industria de tecnologías
   en salud, ha resultado en una elección difícil entre cuidado y privacidad /
   fraude económico para los pacientes. Vemos este problema en expansión a medida
@@ -117,6 +120,17 @@ clínico.
   aprovechado para mejorar los cuidados del paciente, su adherencia o los
   resultados, ya que también se enfrentan a los retos de estar integrados a los
   EHR.
+
+2. Visión general del sistema
+
+Los problemas actuales se resuelven usando la Red Blockchain Patientory. Los
+sistemas EMR tradicionales son estructuras centralizadas, sujetas a violaciones
+de seguridad, regulaciones estrictas y costos extra muy onerosos. Implementando
+la infraestructura Blockchain de Patientory, los proveedores verán una
+eliminación de las brechas de seguridad, un canal para facilitar la coordinación
+con resultados visibles en la mejora general de la salud de los pacientes. En la
+figura se muestra un esquema que describe la infraestructura blockchain de
+Patientory y su interoperabilidad entre pacientes y proveedores
 
 
   [#Begoyan]: Begoyan, A. "An overview of interoperability standards for electronic health records." USA: society for design and process science (2007).
