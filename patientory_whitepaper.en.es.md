@@ -799,6 +799,37 @@ Patientory y su interoperabilidad entre pacientes y proveedores
   sea comprensivo, dinámico e interactivo en el que sea vital que el paciente
   pueda seguir, gestionar y participar en el cuidado del individuo.
 
+  2. Resultados clínicos
+
+  Las Mediciones de Resultados Relacionadas al Paciente (Patient-related outcome
+  measures, PROMs), que se enfocan en los resultados que están directamente
+  relacionados con el paciente, han tenido importancia adicional y significado
+  en los últimos años. Esto se debe, en parte, al incremento de la atención
+  enfocada en la experiencia del paciente durante el cuidado y para proveer una
+  revisión enfocada en el paciente sobre la carga y el impacto de la enfermedad.
+  Los PROMs pueden incluír síntomas y otros aspectos de salud relacionados con
+  indicadores de la calidad de vida como función física o social, adherencia al
+  tratamiento y satisfacción con el tratamiento. Ellos también facilitan una
+  comunicación más precisa entre el paciente y el médico en términos de la carga
+  de enfermedades relacionadas con el tratamiento, al proveer una evaluación
+  más completa y detallada de los tratamientos para condiciones específicas,
+  como cáncer o esclerosis múltiple.
+
+  Los PROMs son diferentes a otras mediciones de eficacia clínica tradicionales
+  (e.g. sobrevivencia al cáncer, eliminación del hábito de fumar) porque ellos
+  directamente reflejan el impácto de la enfermedad y del tratamiento desde las
+  perspectiva del paciente. Estas medidas pueden examinar el balance entre la
+  eficiencia del tratamiento y su carga en el paciente. También es efectiva en
+  la búsqueda de áreas como el funcionamiento físico y bienestar general, así
+  como en resaltar la eficacia y seguridad de tratamientos en relación a su
+  beneficio clínico en general. Porque estas mediciones por sí mismas son
+  desarrolladas desde la perspectiva del paciente, también pueden facilitar un
+  mayor involucramiento del paciente en las decisiones sobre el tratamiento así
+  como proveer una guía para decisiones de salud general. Esencialmente,
+  reforzando una blockchain con PROM se refuerza la habilidad de incentivar a
+  proveedores y pagadores a cumplir con estándares de cuidado de la salud.
+
+
 
 
 [#1]: Begoyan, A. "An overview of interoperability standards for
