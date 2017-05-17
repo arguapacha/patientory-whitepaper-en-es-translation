@@ -476,6 +476,33 @@ Patientory y su interoperabilidad entre pacientes y proveedores
   no es un evento catastrófico, dada la habilidad administrativa de remover el
   control de acceso a un contrato para una llave y asignarselo a otra.
 
+  4. Interoperabilidad
+
+  Los sistemas EHR están basados en una arquitectura separada de validación de
+  credenciales, en el que los datos del paciente se mantienen en cada uno de los
+  sistemas de forma separada. Esto ha resultado en software de coordinación
+  uno-a-uno con soluciones "add-on" para estos sistemas que les permiten la
+  coordinación del cuidado del paciente con otros proveedores y organizaciones
+  auxiliares de salud. Sin embargo, el acceso a la información desde la
+  organización principal proveedora hacia las otras organizaciones es
+  únicamente por medio de una capacidad limitada, como en los casos de Leer,
+  Enviar, Transmitir o Notificar. Más aún, el Paciente o Consumidor tiene muy
+  limitada su interacción o involucramiento en este intercambio de información.
+  En adición, un problema con los mecanismos existentes de intercambio de datos
+  es la dificultad en la rectificación de errores que puedan ocurrir durante el
+  proceso de envío.
+
+  Una vez que se configure una blockchain y sus contratos inteligentes, los
+  parámetros se vuelven absolutos. El paciente se vuelve el intermediario
+  principal en el envío y la recepción de información de salud, negando la
+  necesidad de actualizaciones frecuentes y análisis de problemas de cualquier
+  software. Dado que los registros blockchain también son imposibles de
+  modificar y se guardan a través de todos los participantes, contingencias de
+  recuperación son innecesarias. Aún más, la estructura transparente de
+  información de la blockchain elimina muchos puntos de integración de
+  intercambio de información y actividades de reporte que consumen mucho tiempo.
+
+
 
 [#1]: Begoyan, A. "An overview of interoperability standards for
 electronic health records." USA: society for design and process science (2007).
