@@ -326,6 +326,42 @@ Patientory y su interoperabilidad entre pacientes y proveedores
     puede ser ahora discutida de tal forma que logremos alcanzar los objetivos
     antes mencionados.
 
+  2. Definición de implementación de hardware y red
+
+  Para lograr los objetivos mencionados anteriormente, la implementación del
+  sistema seleccionada requiere varios sistemas independientes. Cada sistema
+  subdivide autoridad, se asegura que únicamente las entidades autorizadas
+  puedan interactuar en una forma aprobada, y provee un mecanismo para
+  incrementar la seguridad mientras mantiene la disponibilidad. Este sistema
+  también ha sido diseñado de forma tal que se pueda escalar desde el inicio,
+  por medio de la adición de esquemas de llamados jerárquicos. Estos sistemas
+  estan descritos completamente y en detalle en las siguientes secciones.
+
+  La entidad con cara al público es una servidor para llamadas remotas (Remote Procedure Call,
+  RPC) que actúa como una interfaz a una implementación privada de blockchain
+  Ethereum (blockchain con permisos). Esta red de nodos blockchain únicamente
+  está autorizada a interactuar con otros nodos blockchain, con un generador de
+  llaves, con el sistema de almacenamiento HIPAA y el servidor RPC. La entidad
+  generadora de llaves es el recurso que genera pares de llaves privadas /
+  públicas para usar en la blockchain. El sistema de almacenamiento HIPAA guarda
+  los datos que constituyen la información privada de salud ePHI.
+
+  Cuando una solicitud de datos ocurre, el sistema HIPAA puede obtener una
+  autorización para comunicarse con el agente redireccionador, quien envía los
+  datos al servidor RPC. Alternativamente, puede estar estructurado de forma tal
+  que el almacenamiento HIPAA se conecte directamente con el servidor RPC. Cada
+  implementación tiene beneficios que deben ser considerados previamente a la
+  selección final. En cualquier evento, el almacenamiento HIPAA descifra partes
+  de la información relevantes al manejo de la solicitud. Esta información
+  descifrada es luego cifrada nuevamente usando la llave pública del solicitante
+  para su transmisión. Esta llave pública es también la llave pública del
+  contrato que actúa como interfaz de control desde la blockchain hacia el
+  almacenamiento HIPAA.
+
+  El diagrama de la topología de red especificada puede ser visto en la figura.
+
+  ![Topografía de red Blockchain de Patientory][fig_network_topography]
+
 
 [#1]: Begoyan, A. "An overview of interoperability standards for
 electronic health records." USA: society for design and process science (2007).
