@@ -70,7 +70,7 @@ clínico.
   no pueden aún compartir su información en forma fácil ni segura. Como
   resultado de esto, los doctores pasan más tiempo escribiendo que hablando con
   sus pacientes. El agotamiento de los médicos pasó de un 45% a un 54% ente 2011
-  y 2014[][#Begoyan]
+  y 2014[][#1]
 
   Aunque existe la noción de información de salud individualizada tanto en el
   aspecto clínico como de bienestar, esta no ha sido bien llevada hacia planes
@@ -327,7 +327,73 @@ Patientory y su interoperabilidad entre pacientes y proveedores
     antes mencionados.
 
 
-[#Begoyan]: Begoyan, A. "An overview of interoperability standards for electronic health records." USA: society for design and process science (2007).
+[#1]: Begoyan, A. "An overview of interoperability standards for
+electronic health records." USA: society for design and process science (2007).
+
+[#2]: Charles N Mead et al. “Data interchange standards in healthcare it-
+computable semantic interoperability: Now possible but still dicult. do we
+really need a better mousetrap?” In: (2006.).
+
+[#3]: Thiago Vieira Joe Paradiso Andrew Lippman Ariel Ekblaw Asaf
+Azaria. “MedRec”. In: (2016). url: www.pubpub.org/pub/medrec.[Accessed:
+05-Apr-2017]. 
+
+[#4]: National Healthcare Ant-Fraud Association. “The Challenge of Health Care Fraud”.
+In: (). url: https://www.nhcaa.org/resources/health-care-anti-fraud-resources/the-challenge-of-health-care-fraud.aspx.
+
+[#5]: Vitalik Buterin. “A next-generation smart contract and decentralized ap-
+plication platform. White Paper”. In: (2014.).
+
+[#6]: Yan-Cheng Chang and Michael Mitzenmacher. “Privacy preserving key- word searches
+on remote encrypted data.In International Conference on Applied Cryptography and
+Network Security”. In: ().
+
+[#7]: Mayo Clinic. “Changes in Burnout and Satisfaction With Work-Life Bal- ance in
+Physicians and the General US Working Population Between 2011 and 2014”. In: ().
+url: www.mayoclinicproceedings.org.
+
+[#8]: Hendrik Tanjaya Tan Darvin Kurniawan David Chandra. “Reidao: Digitis- ing Real
+Estate Ownership”. In: (). url: http://reidao.io/whitepaper. pdf.
+
+[#9]: Centers for Disease Control Prevention. “HIPAA privacy rule and public
+health. Guidance from CDC and the US Department of Health and Human Services.”
+In: (2003.).
+
+[#10]: Roy Thomas Fielding. “Architectural styles and the design of network- based
+software architectures.” In: (2000.).
+
+[#11]: HHS.gov. “H. H. S. O. of the Secretary Summary of the HIPAA Pri- vacy Rule”.
+In: (2013). url: www.hhs.gov/hipaa/for-professionals/
+privacy/laws-regulations/index.html.[Accessed:04-Apr-2017].
+
+[#12]: HHS.gov. “Methods for De-identification of PHI”. In: (2015). url: https: / / www
+. hhs . gov / hipaa / for - professionals / privacy / special -
+topics/de-identification/index.html#protected.[Accessed:04- Apr-2017].
+
+[#13]: Alex Mizrahi Iddo Bentov Charles Lee and Meni Rosenfeld. “Proof of activity:
+Extending bitcoin’s proof of work via proof of stake.” In: (2014).
+
+[#14]: Sunny King and Scott Nadal. “PPCoin: Peer-to-peer crypto-currency with
+proof-of-stake.” In: (2012).
+
+[#15]: Satoshi Nakamoto. “Bitcoin: A peer-to-peer electronic cash system”. In:
+(2008).
+
+[#16]: Stean D Norberhuis. In: ().
+
+[#17]: Pishing Chiang Philip Chuang Maureen Madden Rainer Winnen-burg Rob McClure Steve
+Emrick Olivier Bodenreider Duc Nguyen and Ivor DSouza. “The NLM Value Set
+Authority Center.” In: (2013.).
+
+[#18]: Amit P Sheth. “Changing focus on interoperability in information sys- tems: from
+system, syntax, structure to semantics. In Interoperating Ge- ographic
+Information Systems,” in: (1999.).
+
+[#19]: Nick Szabo. “Formalizing and securing relationships on public networks.” In:
+(1997.).
+
+[#20]: “US GPO. CFRx 164 security and privacy. 2008.” In: (). url: http:
+//www.access.gpo.gov/nara/cfr/waisidx08/45cfr16408.html. Accessed:2016-08-06..
 
 [fig_estructura_patientory]: fig_estructura_patientory.png "Estructura de
 Patientory
