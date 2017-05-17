@@ -778,6 +778,27 @@ Patientory y su interoperabilidad entre pacientes y proveedores
   tarjetas de crédito modernas, que facilitarían la misma operación
   independientemente del teléfono.
 
+4. Prioridades de salud Nacionales / Internacionales
+
+  1. Cuidado personalizado
+
+  Para lograr un cuidado efectivamente superior, un acercamiento centrado en la
+  persona es importante. Este acercamiento debe tomar en cuenta no solo los
+  aspectos clínicos sino también los factores económicos y sociales que impiden
+  la habilidad de la persona para vincularse exitosamente en el cumplimiento de
+  sus cuidados y el estilo de vida saludable que lleva a un bienestar sostenido.
+
+  Para obtener resultados efectivos del cuidado se requiere identificar
+  claramente las barreas de la salud individual y sus situaciones de vida. Con
+  un número creciente de pacientes con presencia de 2 o más comorbilidades, la
+  aproximación "centralizada" donde un tipo de tratamiento sirve para todos, no
+  conduce en la motivación y guía efectiva para obtener resultados de los
+  cuidados. Por tanto, un modelo de cuidado más flexible, personalizado para
+  incluír las características de salud y bienestar multi-facéticos de un
+  paciente, tienen que ser considerados. Esto requere de un plan de cuidado que
+  sea comprensivo, dinámico e interactivo en el que sea vital que el paciente
+  pueda seguir, gestionar y participar en el cuidado del individuo.
+
 
 
 [#1]: Begoyan, A. "An overview of interoperability standards for
