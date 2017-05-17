@@ -1,4 +1,5 @@
-Title:  Patientory: Una red punto a punto para el cuidado de la salud per medio del almacenamiento de Registros Médicos Electrónicos v.1.0
+Title:  Patientory: Una red punto a punto para el cuidado de la salud per medio
+del almacenamiento de Registros Médicos Electrónicos v.1.0
 Author: Chrissa McFarlane, Michael Beer, Jesse Brown, Nelso Prendergast
 Date:   Abril 2017
 
@@ -11,37 +12,37 @@ términos de todas las leyes aplicables a bonos y otras leyes.**
 ## Abstract ##
 
 Un intercambio de información de salud (HIE) apoyado en una blockchain puede
-{==liberar==} el verdadero valor de la interoperabilidad y ciber seguridad. Este
-sistema tiene el potencial de eliminar la fricción y los costos de los actuales terceros
-intermediario, cuando se considera la gesitón de la salud de la población.
+desbloquear el verdadero valor de la interoperabilidad y ciber seguridad. Este
+sistema tiene el potencial de eliminar la fricción y los costos de los
+intermediarios, al memoento de considerar la gestión de la salud de la población.
 Existen promesas de mejora de integración de los datos, reducción de costos de
-transacción, decentralización y desintermediación de confianza. Ser capaz de
+transacción, descentralización y desintermediación de confianza. Ser capaz de
 coordinar el cuidado de un paciente por medio de una HIE con blockchain
 esencialmente disminuye algunos servicios innecesarios y pruebas duplicadas, con
 reducción de costos y mejoras en las ineficiencias del ciclo de cuidado contínuo
 del paciente, mientras se adhiere a todas las reglas y los estándares HIPAA. Un
 protocolo centrado en el paciente soportado en tecnología blockchain, Patientory
 está cambiando la forma en la que los participantes del sistema de salud
-gestionan datos médicos electrónicos e interactuan con los equipos de cuidado
+gestionan datos médicos electrónicos e interactúan con los equipos de cuidado
 clínico.
 
 
-1. Introduction
+1. Introducción
 
   1. ¿Qué es Blockchain?
   
-  La tecnología detrás de la moneda digital bitcoin, el nacimiento de blockchain
-  se remonta a la persona (o grupo) sin identificar, con pseudónimo conocido como
-  Satoshi Nakamoto. Desde 2009 blockchain ha ganado un uso más generalizado en la
-  industria financiera, con una variedad de negocios y servicios soportados en blockchain que
-  están entrando al mercado. La tecnología blockchain se usa para compartir un
-  libro de transacciones a través de una red de negocios sin el control por parte
-  de una única entidad. El libro distribuído facilita la creación de relaciones
-  comerciales de costos eficientes donde virtualmente cualquier cosa de valor
-  puede ser seguido y negociado din requerir un punto central de control. La
-  tecnología pone la privacidad y el control de los datos en las manos del
-  individuo. La confianza e integridad es establecida sin apoyarse en
-  intermediarios.
+  Es la tecnología detrás de la moneda digital bitcoin. el nacimiento de blockchain
+  se remonta a una persona (o grupo) sin identificar, con pseudónimo conocido
+  como Satoshi Nakamoto. Desde 2009 blockchain ha ganado un uso más generalizado
+  en la industria financiera, con una variedad de negocios y servicios
+  soportados en blockchain que están entrando al mercado. La tecnología
+  blockchain se usa para compartir un libro de transacciones a través de una red
+  de negocios sin el control por parte de una única entidad. El libro
+  distribuído facilita la creación de relaciones comerciales de costos
+  eficientes donde virtualmente cualquier cosa de valor puede ser seguido y
+  negociado din requerir un punto central de control. La tecnología pone la
+  privacidad y el control de los datos en las manos del individuo. La confianza
+  e integridad es establecida sin apoyarse en intermediarios.
 
   2. Infraestructura de Salud actual
   
@@ -83,7 +84,7 @@ clínico.
   fraude económico para los pacientes. Vemos este problema en expansión a medida
   que los datos creados por la industria crece. **La tecnología segura de
   blockchain, sus propiedades y su naturaleza distribuida pueden ayudar a
-  reducir el costo y la eficiencia de estas operaciones así como proveer una
+  reducir el costo y aumentar la eficiencia de estas operaciones así como proveer una
   infraestructura segura viable**
 
   3. Relación Paciente - Proveedor
@@ -134,6 +135,196 @@ con resultados visibles en la mejora general de la salud de los pacientes. En la
 figura se muestra un esquema que describe la infraestructura blockchain de
 Patientory y su interoperabilidad entre pacientes y proveedores
 
+3. Implementación del sistema
+
+  1. Regulaciones HIPAA y gúias de cumplimiento
+
+  Antes de cualquier discusión importante sobre implementaciones, las
+  restricciones de ley dadas por los mandatos del Acto de Responsabilidades y
+  Portabilidad de Seguros de Salud de 1996 (Health Insurance Portability and
+  Accountability Act, HIPAA) deben ser cumplidas. Las reglas de principal
+  cumplimiento son la Regla de Privacidad, la Regla de Seguridad y las Guías de
+  Computación en la Nube. El propósito de este documento no es el de realizar
+  una investigación completa de la ley HIPAA. Los elementos que son pertinentes
+  a la implementación y su discusión serán definidos y discutidos en más
+  detalles en el momento que su aplicación sea relevante.
+
+    1. Regla de Privacidad
+    
+    El modelo de negocio de Patientory requiere que los requerimiento de la
+    Regla de Privacidad sean aplicados dado el almacenamiento elctrónico y la
+    transmisión de información de salud privada. La aplicabilidad de la Regla de
+    Privacidad se resume como, "La Regla de Privacidad ... (aplica) a planes de
+    salud, cámaras de compensación de salud y para cualquier proveedor de salud
+    que transmita información de salud en forma electrónica" [][#2]. En adición
+    a dichos participantes, aquellas partes que actúen en su nombre, como
+    proveedores de servicios también son responsables por el cumplimiento HIPAA.
+    Estos agentes se denominan Socios de Negocio (Business Associates, BA) y el
+    documento legal que define las reglas y regulaciones que el BA debe cumplir
+    es el Contrato de Socio de Negocios (Business Associate Contract). HIPAA
+    ejerce requerimientos estrictos en la naturaleza de estos acuerdos.
+
+    Los puntos a resaltar, dada la investigación inicial, son aquellos
+    requerimientos que especifican la autorización de uso, el uso de información
+    des-identificada y la definición de información privada. La
+    Información Privada de Salud (Private Health Information, PHI o ePHI para
+    datos electrónicos) es definida como "toda la información identificable
+    individualmente, contenida o transmitida por una entidad cubierta o su
+    socio de negocios, en cualquier forma o medio, sea electrónico, papel u
+    oral"[][#2]. La información de salud des-identificada es definida de la
+    siguiente manera: "Información de Salud que no identifica a un individuo y
+    con respecto a la cual no existe una base razonable para creer que la
+    información puede usarse para identificar un individuo, no es información de
+    salud identificable a un individuo"[][#2]. Datos des-identificados usan
+    restricciones que son resumidas por lo siguiente: "No hay restricciones en
+    el uso o publicación de información de salud des-identificada. La
+    información de salud des-identificada no identifica ni provee una base
+    razonable para identificar un individuo"[][#3]. El límite de información
+    identificada a des-identificada está definido como cualquier información que
+    pueda restringir el posible número de individuos al que una recolección de
+    datos está asociada con no menos del 0.04% del total de la población de
+    EEUU.
+
+    2. Regla de Seguridad y Guías de Computación en la Nube
+
+    Dada la longitud del contenido asociado a este tema, solo aquellos elementos
+    de aplicabilidad principal son nombrados por referencia. Estos elementos de
+    aplicabilidad primaria son los siguientes: "Cuando una entidad cubierta
+    ytilizza los servicios de un CSP para crear, recibir, mantener o transmitir
+    ePHI (como en el caso de procesar o almacenar ePHI), en su nombre, el CSP es
+    un socio de negocios bajo la HIPAA. Más aún, cuando un socio de negocios
+    contrata un CSP para crear, recibir, mantener o transmitir ePHI en su
+    nombre, el CSP subcontratado es un socio de negocios en sí mismo. Esto es
+    cierto aún si el CSP procesa o almacena solamente ePHI encriptado y no tiene
+    una llave de encripción para los datos. La falta de una llave de encripción
+    no exime al CSP del estado de Socio de Negocios y sus obligaciones bajo las
+    reglas HIPAA"[][#3].
+
+    Las entidades cubiertas a menudo usan Proveedores de Almacenamiento en la
+    Nube (Cloud Storage Providers, CSP) para almacenar información de salud, a
+    menudo citando que es más efectivo y reduciendo costos administrativos de
+    infraestructura tecnológica. Sin embargo, a medida que los consumidores se
+    apoyan en proveedores en la nube para almacenar sus datos personales,
+    entregan el control directo sobre esos datos y, como resultado, no conocen
+    quién tiene acceso y dónde está la información ubicada geográficamente. Aún
+    si se desarrolla un acuerdo explícito entre el socio de negocios y el
+    proveedor de almacenamiento en la nube, sólamente proveería los términos de
+    quién toma la responsabilidad de la privacidad y la seguridad de los datos
+    en el evento que ocurriera una brecha. El consumidor podría potencialmente
+    tener control sobre el acceso a estos flujos de datos, pero tendría que
+    apoyarse en el proveedor de almacenamiento en la nube para hacer cumplir
+    esos privilegios.
+
+    Aunque el uso de almacenamiento en la nube es popular, aún hay una cantidad
+    de riesgos que el consumidor asume cuando se usa este mecanismo para su
+    información personal. En una arquitectura basada en la nube, los datos son
+    replicados y movidos constantemente, así que el riesgo de usos no
+    autorizados de los datos se incrementa. Adicionalmente, varios individuos se
+    les proporciona acceso potencial a los datos, como administradores,
+    ingenieros de redes y expertos técnicos que ejecutan esos servicios en los
+    servidores que almacenan estos datos. Esto incrementa el riesgo de acceso y
+    uso no autorizado. 
+
+    Sin embargo, aún si los datos se encuentran seguros por medio de controles
+    de acceso restringidos y encriptación, en su punto de origen y mientras se
+    encuentra en tránsito, aún se enfrenta a un problema para el desarrollo de
+    Mediciones de Resultados Reportados por el Paciente (Patient-Reported
+    Outcomes Measures, PROMs). El concepto de PROM es desarrollar una medición
+    enfocada en el paciente que se relaciona con un área o enfoque que es de
+    importancia para el paciente, y uno en el que su vinculación y
+    retroalimentación es esencial para su implementación exitosa. Acceder a
+    grandes flujos de datos de una variedad de dispositivos que son parte de las
+    redes IoT, como se usan ahora, en unión con sevicios basados en la nube
+    pueden proveer una base sobre la cual constituir una PROM, pero es difícil
+    saber si datos almacenados independientemente en la nube producirán una
+    medida que tenga el significado esperado y relevancia para el paciente.
+
+    Implementar una tecnología blockchain para asegurar y mejorar la seguridad
+    de los registros médicos asociados con el sistema, puede minimizar brechas
+    de seguridad y la descentralización final de la propiedad de los datos. El
+    proceso de cifrado de datos cuando se envían a la base de datos y descifrado
+    cuando llegan será el utilizado. Los datos serán encriptados usando
+    algoritmos que cumplen estándares NIST durante la transmisión y recepción
+    como lo indica la ley. Por tanto, el intercambio de información cumplirá con
+    las mejores prácticas delineadas por las especificaciones NIST.
+    
+    **En relación al rápido aumento de brechas de información que se enfrenta la
+    industria de la salud, la tecnología blockchain permite el cumplimiento de
+    HIPAA tanto para pacientes como proveedores**
+
+    3. Análisis de limitaciones del sistema Blockchain debidos a las
+       restricciones de HIPAA
+
+    La red Blockchain de Ethereum facilita un subconjunto diverso de
+    implementaciones de sistemas debido a la aplicación de un lenguaje de
+    programación Turing completo que se ejecuta en la Máquina Virtual de
+    Ethereum. Estos sistemas tienen limitaciones en el sentido que la máquina
+    virtual no tiene una inspección directa desde el exterior, excepto por medio
+    de Servicios Oráculo. Adicionalmente, las limitaciones de almacenamiento de
+    la blockchain son aplicadas por el costo del almacenamiento y el costo del
+    acceso a estos datos. En el momento de escribir este documento, el tiempo de
+    bloque de la cadena estrablece un límite mínimo para solicitudes de cambio
+    en el estado de al menos quince segundos.
+
+    La limitación de blockchain para almacenar información privada puede
+    superarse por medio de ofuscación de los datos, como cifrado, pero en el
+    evento que la llave para descifrar sea revelada, no hay forma de remover los
+    datos sensibles de la blockchain. Para el propósito de llevar datos que
+    cumplan con HIPAA, esto puede resultar potencialmente en una fuga de
+    información constante e imposible de corregir dada la inmutabilidad de la
+    blockchain misma. Aunque los datos des-identificados pueden, en teoría, ser
+    guardados en la Blockchain Pública de Ethereum, sería desastroso asumir que
+    el mecanismo de des-identificación nunca fallará, o que la información
+    asociada con interacciones en la blockchain no puedan, sin querelo, revelar
+    identidad. Esta conclusión es la misma a la que llegó el MIT Media Lab
+    durante la formación de los Protocolos MedRec y se resume en el whitepaper
+    MedRec[][#3]. Minar esta información paralela puede ser tan simple como
+    observar los tiempos e interacciones con contratos de almacenamiento
+    conocidos.
+
+    Por medio de este análisis, puede ser posible asociar un individuo con una
+    institución, y más importante, el tiempo durante el cual estuvo presente en
+    las instalaciones. Dada la naturaleza especializada de algunas
+    instalaciones, esta es información suficiente para constituir una violación
+    de HIPAA dada la habilidad de un observador pasivo para inferir tanto
+    identidad, ubicación, tiempo de interacción y, posiblemente, clase de
+    diagnóstico.
+
+    Si se asume que esta ubicación está localizada en un punto remoto en la
+    naturaleza, la reducción a menos de un 0.04% de la población de EEUU se
+    convierte en un problema trivial. Estos hechos constituyen un punto único de
+    falla que debe ser reconocido. Más aún, el almacenamiento directo de
+    información, así sea cifrada, en una blockchain crea una responsabilidad de
+    los administradores de base de datos para entrar en contratos BAC dadas sus
+    acciones como una ubicación de almacenamiento de datos HIPAA (ver sección
+    titulada "Regla de Seguridad y Guías de Computación en la Nube). Esta es una
+    expectativa irracional dado que cada minero e incluso los individuos con
+    nodos pasivos necesitarían todos cumplir con la normativa HIPAA. Dados estos
+    inconvenientes, nosotros implementamos un mecanismo de almacenamiento
+    persistente de información sensitiva por medio de una implementación privada
+    de una blockchain basada en Ethereum.
+
+    4. Objetivos de la implementación para Usabilidad y Seguridad
+
+    Los objetivos principales de cualquier sistema seguro pueden resumirse como
+    los objetivos de confidencialidad, integridad, disponibilidad,
+    responsabilidad y aseguramiento de la información e identidad. Para lograr
+    estos objetivos un atacante y un usuario deben ser definidos. Cada uno de
+    estos roles demanda cierto reconocimiento de habilidad. Desde la perspectiva
+    del usuario, el sistema necesita ser suficientemente transparente de forma
+    que no sea requerido un conocimiento avanzado. Igualmente, dada la
+    inhabilidad de un usuario normal para comprender las complejas
+    consideraciones de seguridad cibernética, el proceso necesita ser resistente
+    a las acciones del usuario.
+
+    En el evento que un ataque ocurra, el sistema está creado de forma que la
+    cantidad de trabajo que debe ser invertido para comprometer un recurso es
+    más valioso que el valor del recurso mismo. Esto es si se entiende que un
+    participante avanzado con los recursos apropiados siempre será capaz de
+    violar el sistema, dado suficiente tiempo y esfuerzo. Más resumidamente, no
+    hay defensa perfecta. Con estas restricciones, la implementación en sí misma
+    puede ser ahora discutida de tal forma que logremos alcanzar los objetivos
+    antes mencionados.
 
 
 [#Begoyan]: Begoyan, A. "An overview of interoperability standards for electronic health records." USA: society for design and process science (2007).
