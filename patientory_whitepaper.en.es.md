@@ -652,6 +652,97 @@ Patientory y su interoperabilidad entre pacientes y proveedores
   de la Fundación Patientory para ser usados en invesigación y desarrollo en
   tecnología blockchain para casos de uso en la salud.
 
+  8. Contratos Inteligentes y procesamiento de reclamaciones de seguros
+
+    1. Auto-adjudicación
+
+    La complejidad de los procesos de facturación médica y reembolsos de
+    terceros a menudo lleva a confusiones y malos entendidos entre paciente,
+    proveedor médico y asegurador. Estas complicaciones llevan a algunos
+    consumidores a no tener claro cuándo, de quién o por cuál cantidad ellos
+    tienen que pagar una factura médica, o siquiera si el pago es su
+    responsabilidad o del proveedor de seguros.
+
+    Patientory es una paltaforma diseñada para aprovechar tanto las tecnologías
+    blockchain de Ethereum y las interfaces de aplicación (API) compatibles con
+    los Recursos Interoperables Rápídos de Salud (Fast Healthcare
+    Interoperability Resources, FHIR), para incrementar eficiencias, permitir
+    adjudicaciones de reclamaciones en tiempo casi-real, proveer acuerdos
+    transparentes entre participantes y disminuir fraudes.
+
+    FHIR se creó en la industria como un formato de datos estándar para reducir
+    la complejidad de integración para sistemas existentes de salud y seguros.
+    Un aspecto clave de nuestra solución, dado el costo de adicionar datos a la
+    blockchain, es limitar esos datos a únicamente lo necesario para que se
+    puedan ejecutar los contratos inteligentes.
+
+    Con costos relacionados con facturación y aseguramiento que se espera
+    alcancen 315 mil millones de dólares (USD) en 2018, y oficinas médicas
+    gastando 3.8 horas cada semana interactuando con pagadores, nuestra
+    plataforma puede brindar una descarga sustancial de estos costos
+    operacionales.
+
+    Métodos que se pueden utilizar para el análisis de la correlación cruzada
+    para información diagnóstica pueden ser también usados para analizar datos
+    de reclamaciones por actividad fraudulenta. Este análisis también puede
+    revelar acciones como comportamientos de búsqueda de drogas al presentarse
+    múltiples instancias de reclamaciones. Ambos casos de uso añaden
+    proposiciones de valor para el uso de este sistema por parte de las
+    compañías de seguros, pero el beneficio último está fuera del alcance de
+    esta información.
+
+    Debido al sistema basado en reglas que se ejecutan con los contratos
+    inteligentes, los acuerdos de cobertura completa pueden ser codificados en
+    contratos inteligentes que sean referenciados contra usuarios finales. Esto
+    permitiría a una entidad médica preguntarle al sistema que verifique la
+    existencia de cobertura previo a la entrega del servicio. El uso del sistema
+    para almacenar información de costos también permite la facturación
+    automática entre instituciones e individuos como una deuda basada en tokens.
+    Por tanto, una institución y un individuo pueden conocer los costos que
+    están incurriendo. Esto remueve trabajo de los departamentos de
+    contabilidad, añadiendo valor a la adopción del sistema.
+
+    **Por esta razón, Patientory es un sistema de pagos cerrado. Se espera que
+    la conexión entre cadenas pueda incluso permitir un intercambio seguro de
+    valor a través de la blockchain pública de Ethereim. Este mecanismo ya está
+    resuelto para la arbitración de transacciones Bitcoin, aunque requiere una
+    entidad confiable para actuar como Oráculo**
+
+    2. Factibilidad
+
+    A través de mecanismos existentes, esta arquitectura puede ser construída.
+    Un ejemplo sería la vinculación del sistema de almacenamiento HIPAA ofrecido
+    por Amazon Web Services, con la plataforma ErisDB. Este Software como
+    Servicio (Service as a Software, SAAS) permite la implementación rápida de
+    una blockchain capaz de ejecutar contratos inteligentes Ethereum con control
+    de accesos completamente regulados como los mencionados anteriormente. La
+    adición de nodos pasivos debería ser construída, pero esto requiere un costo
+    de desarrollo mínimo comparado al desarrollo de una arquitectura completa.
+
+    Con la arquitectura de contratos inteligentes de tres capas de Patientory,
+    solo un subconjunto de características de los contratos inteligentes son
+    implementados en la blockchain de Ethereum. La compleja lógica de negocio se
+    remueve del camino de la ejecución, lo que permite a la capa de datos ser
+    optimizada para reflejar la naturaleza distribuída de la red.
+
+    Los componentes de los paquetes de contratos inteligentes implementados en
+    la blockchain ethereum son el esquema de base de datos, transacciones de
+    validación y verificación que añaden modifican el libro, y optimización de
+    lógica de búsquedas para la lectura del libro.
+
+    La lógica de negocios se ubica encima de la blockchain ethereum en una capa
+    media de negocios. Este código implementa la lógica de una variedad de
+    servicios, incluyendo ejecución segura, garantías, identidad, soporte
+    criptográfico, formato de datos, mensajería confiable, disparadores y la
+    habilidad de conectar dicho código con el esquema en contratos inteligentes
+    específicos en cualquier número de blockchains, permitiendo a Patientory
+    conectarse a varios consorcios de salud. Estos servicios se proveen en una
+    capa, donde las partes de código individuales que soportan los contratos
+    inteligentes pueden ejecutarse, enviar transacciones a los nodos de la
+    blockchain, y conectarse al esquema en la base de datos.
+
+
+
 
 
 [#1]: Begoyan, A. "An overview of interoperability standards for
