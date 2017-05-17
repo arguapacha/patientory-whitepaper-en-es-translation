@@ -362,6 +362,120 @@ Patientory y su interoperabilidad entre pacientes y proveedores
 
   ![Topografía de red Blockchain de Patientory][fig_network_topography]
 
+  3. Definición de Implementación de Software
+
+  En adición a la separación física de los sistemas en la implementación de
+  hardware y redes, el software de control de acceso facilita la integridad de
+  los datos y las verificaciones de autorización de entidades solicitantes. El
+  sistema de software, desde una perspectiva de control de acceso y encripción
+  de datos se describe abajo.
+
+  La base de datos HIPAA solo aceptará conexiones entrantes del redireccionador
+  HIPAA. Esto asegura que el flujo de tráfico se separe únicamente por vias
+  conocidas. El redireccionador HIPAA solo actuará para redireccionar una
+  solicitud al almacenamiento HIPAA únicamente si ha ocurrido una transacción
+  válida en la blockchain, y esta transacción resulta en la emisión de un evento
+  de solicitud. Este evento debe contener la llave pública del solicitante, así
+  como los campos solicitados. Finalmente, el servidor RPC usa una interfaz de
+  aplicación (API) controlada de tal forma que solo usuarios conocidos puedan
+  interactuar con el servidor.
+
+  Para entender la jerarquía de llamadas del sistema, la estructura del contrato
+  para facilitar el control de acceso debe ser explicado. Cada usuario en el
+  sistema se empareja a una dirección privada en la blockchain. Cada dirección
+  privada está autorizada únicamente a hablar directamente con UN contrato en la
+  blockchain. Este contrato es el contrato de clase individual. Instituciones,
+  empleados de instituciones y clientes son objetos de nivel de clase.
+
+  Estos objetos con nivel de clase son interfaces basadas en permisos. El
+  Contrato Institucional tiene una lista de todos los clientes que tienen
+  privilegios de visualización a la institución y cada contrato de cliente tiene
+  una lista de instituciones a quienes ha dado el permiso. El contrato que tiene
+  la institución tiene funciones que facilitan la revocación de permisos a la
+  institución, por parte del usuario. **El Contrato Institucional no puede
+  alterar esta lista, previniendo así el acceso sin autorización a los registros
+  individuales**. Adicionalmente, el Contrato Institucional posee una lista de
+  empleados autorizados que está en capacidad total de mantener. Este esquema de
+  permisos debería idealmente funcionar de tal manera que la revocación
+  automática de un permiso se realice en intervalos semi-regulares para prevenir
+  que una institución mantenga por error los permisos de acceso a información de
+  antiguos empleados.
+
+  Dentro de este sistema, todos los participantes externos interactúan por medio
+  del envío de una transacción firmada que codifica la llamada de la solicitud.
+  Estas transacciones son enviadas por el servidor RPC luego de la validación
+  del usuario. El servidor RPC envía las solicitudes al servidor de acumulación
+  de datos, quien después los reenvía a los mineros basados en un mecanismo de
+  distribución de cargas. Los mineros entonces procesan la solicitud enviando la
+  transacción a nombre del solicitante hacia su respectivo contrato controlador.
+  Este contrato contiene los permisos de los datos que la entidad tiene
+  autorización de acceder dentro del contrato. Este contrato es la única entidad
+  que aceptará una transacción desde una solicitud externa. Por tanto, un
+  mecanismo es establecido para controlar el llamado a operaciones dentro de la
+  blockchain.
+
+  Para cada transacción, se crea un registro inmodificable de quién hace el
+  llamado. Esto asegura que todos los intentos de acceso de información queden
+  registrados. Los datos grabados dentro del contrato del usuario son un sistema
+  de punteros hash que, cuando son resueltos por el sistema de almacenamiento
+  HIPAA, resultan en el retorno de los datos correctos. Esta información se
+  eleva hacia el redireccionador HIPAA por medio de la ejecución de una
+  transacción de solicitud válida. El mecanismo que facilita esta comunicación
+  es indirecto y se manifiesta por medio del sistema de mensajería de eventos de
+  la blockchain. Dada la limitación que el solicitante puede únicamente
+  consultar la base de datos por medio de una transacción válida, y que el
+  usuario no puede directamente alterar su propia información, el control de
+  acceso es demostrable. Desde la perspectiva de las instituciones, el mecanismo
+  es similar, excepto que el Contrato Institucional alberga una lista de
+  usuarios de los cuales puede solicitar datos y una lista de usuarios que
+  pueden interactuar con esta institución como empleados. Cuando una transacción
+  solicitante se origina desde el contrato de un empleado de la institución, el
+  contrato controlador llama el contrato institucional, quien llama el contrato
+  de usuario para preguntar por los punteros a los datos que devuelven los ePHI.
+  Si se asume que la institución está en la lista de instituciones aprobada por
+  el usuario, el contrato retorna los punteros apropiados. Estos punteros son
+  luego publicados como un evento de mensaje que, de nuevo, sube hasta el
+  sistema de almacenamiento HIPAA.
+
+  **Para claridad, el proceso completo de una solicitud única es así: El
+  solicitante externo pide datos al servicio por medio de una llamada al
+  servidor RPC con una transacción firmada criptográficamente. El servidor RPC
+  verifica la identidad de la entidad externa por medio de la firma de la
+  solicitud de ingreso**
+
+  Si se verifica que la firma concuerda con una entrada en la base de datos de
+  llaves públicas con permisos, el servidor RPC acepta la solicitud y envía la
+  petición a los verificadores privados de la blockchain. El verificador ejecuta
+  este llamado y en el evento que esta solicitud es una acción permitida, la
+  transacción se ingresa en el siguiente bloque. Esta transacción también causa
+  la emisión de un evento de mensaje en la blockchain. Este evento mensaje es
+  observado por el Redireccionador HIPAA, quien actúa con la creación de un
+  mensaje cifrado para el Almacén de datos HIPAA basado en los hash del evento
+  de mensaje. Este mensaje también contiene la llave pública del solicitante. La
+  base de datos HIPAA observa esta solicitud y transmite una copia cifrada de la
+  información al servidor RPC usando la llave pública del solicitante. El
+  servidor RPC luego retorna esta información al solicitante mapeando la IP
+  solicitante a la llave pública en el mensaje. El servidor RPC transmite este
+  mensaje sin ver nunca los datos subyacentes. Estos datos son inmediatamente
+  destruídos por el servidor RPC, asegurando así que el servidor RPC actúe como
+  un conducto que no necesita cumplir con los requerimientos HIPAA.
+
+  El mecanismo para publicar datos es, de nuevo, de naturaleza similar, pero los
+  datos que se envían se encriptan con la llave pública del Almacenamiento
+  HIPAA. Las otras operaciones son idénticas, excepto que los datos que se están
+  enviando van subiendo por el sistema de mensaje de eventos. Así, dado el uso
+  de funciones hashing de baja colisión y nonces con marca de tiempo, los datos
+  pueden ser guardados y el contrato es capaz de calcular la dirección donde los
+  datos enviados pueden ser localizados en el Almacen HIPAA.
+
+  Finalmente, se debe tratar la distribución de llaves privadas. Esta puede ser
+  facilitada por medios ópticos para usuarios de teléfonos inteligentes. Esto
+  sería análogo al uso de códigos QR como direcciones para Ethereum. Otros
+  medios pueden también ser establecidos por aplicaciones tanto en equipos de
+  escritorio así como tablets o teléfonos inteligentes. La pérdida de una llave
+  no es un evento catastrófico, dada la habilidad administrativa de remover el
+  control de acceso a un contrato para una llave y asignarselo a otra.
+
 
 [#1]: Begoyan, A. "An overview of interoperability standards for
 electronic health records." USA: society for design and process science (2007).
