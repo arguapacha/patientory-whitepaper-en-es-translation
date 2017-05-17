@@ -829,6 +829,20 @@ Patientory y su interoperabilidad entre pacientes y proveedores
   reforzando una blockchain con PROM se refuerza la habilidad de incentivar a
   proveedores y pagadores a cumplir con estándares de cuidado de la salud.
 
+5. Conclusión
+
+Blockchain jugará un rol cada vez más significativo en la infraestructura
+tecnológica de la salud y traerá cambios benéficos y nuevas eficiencias a para
+participante en el ecosistema. Es de vital importancia que las organizaciones de
+salus entiendan el corazón de la tecnología blockchain para asegurarse que están
+listos para los cambios que la tecnología conlleva.
+
+El resultado será una nueva generación de poderosas aplicaciones basadas en
+blockchain que definirán la siguiente era de negocios en la salud. Para que
+blockchain llene su potencial en salud, debe estar basaso en estándares para
+asegurar la compatibilidad e interoperabilidad dentro del panorama del sistema
+de salud centralizado.
+
 
 
 
