@@ -630,6 +630,28 @@ Patientory y su interoperabilidad entre pacientes y proveedores
 
   ![Valor del Token Patientory en función de las transacciones][fig_token_value]
 
+  7. Adquisición de Tokens
+
+  PTOY puede ser adquirido a través de la aplicación nativa de Patientory, un
+  mercado de criptomonedas y de otros pacientes, médicos o aseguradora por
+  transferencia. Los usuarios de la plataforma tendrán la habilidad de adquirir
+  PTOY enviando Ether (ETH) al contrato de creación PTOY en la blockchain
+  durante la pre-venta. La interfaz de Patientory se integrará con soluciones de
+  terceros en el mercado como Shapeshift y Coinbase para los usuarios que no
+  tiene ETH.
+
+  Las distribuciones iniciales de Tokens Patientory ser harán en forma de
+  pre-venta. Cualquier persona podrá adquirir PTOY a una tarifa con descuento
+  enviando ETH al contrto inteligente de compra de tokens. Aquellos con otras
+  criptomonedas como ETC o BTC pueden crear PTOY por medio de un servicio
+  tercerizado de conversión que estará disponible en la página de preventa.
+
+  El equipo fundador recibirá una asignación de 10% de PTOY, sujeto a un periodo
+  de retención de 12 meses. Estos tokens servirán como incentivo a largo plazo
+  para el equipo fundador de Patientory. Un 20% adicional se asignarán al fondo
+  de la Fundación Patientory para ser usados en invesigación y desarrollo en
+  tecnología blockchain para casos de uso en la salud.
+
 
 
 [#1]: Begoyan, A. "An overview of interoperability standards for
