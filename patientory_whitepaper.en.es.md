@@ -741,7 +741,42 @@ Patientory y su interoperabilidad entre pacientes y proveedores
     inteligentes pueden ejecutarse, enviar transacciones a los nodos de la
     blockchain, y conectarse al esquema en la base de datos.
 
+  9. Beneficios únicos adicionales
 
+  Aunque una institución médica, como un hospital, no debería tener acceso a
+  ningún registro que no hayan sido específicamente autorizado, al tener
+  usuarios con una pre-autorización para compartir información bajo situaciones
+  de emergencia, el usuario final podría obtener beneficios adicionales por su
+  participación en el servicio. Con esto en mente, la necesidad de una
+  institución médica de acceder a los registros de una persona que no responde
+  en situaciones de emergencia constituye una situación que amerita el
+  privilegio de escalación, si se da que el usuario haya autorizado previamente
+  este acceso. En el evento que una persona no responde, y tiene su teléfono
+  celular presente, la institución puede probar la posesión del dispositivo del
+  individuo utilizando un método de firma secundaria que está disponible en la
+  pantalla de bloqueo del teléfono. Esta segunda clave no debe ser la misma
+  llave privada principal de la cuenta. Por tanto, si la cuenta de una
+  institución envía una solicitud a la blockchain conteniendo la clave pública
+  de un individuo y el teléfono de dicho individuo ha enviado la clave de
+  emergencia, la blockchain puede escalar privilegios para permitir acceso a los
+  registros por parte del personal médico que de otro modo no tendría acceso.
+
+  **Esta clave privada debe considerarse temporal y ser reemplazada por el
+  individuo tan pronto como sea posible. En esta forma, el intercambio seguro de
+  información entre el individuo y una institución autorizada puede facilitarse
+  en condiciones de emergencia**
+
+  Si una institución solicita esta información sin la autorización apropiada, el
+  individuo sería notificado de estas acciones. Si el individuo niega la
+  solicitud dentro de un intervalo de tiempo, los datos no son compartidos. Más
+  aún, si una institución intenta múltiples solicitudes fraudulentas, la
+  institución puede ser castigada con una revocación de privilegios, castigos
+  monetarios y/o acciones legales. El daño causado por la pérdida de un celular
+  es mínimo dada la necesidad de tener dos claves, la del teléfono y la de la
+  institución. En el futuro visible, todas las tarjetas de aseguradoras podrían
+  tener incluídos micro controladores criptográficos, iguales a los de las
+  tarjetas de crédito modernas, que facilitarían la misma operación
+  independientemente del teléfono.
 
 
 
