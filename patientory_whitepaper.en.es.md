@@ -502,7 +502,49 @@ Patientory y su interoperabilidad entre pacientes y proveedores
   información de la blockchain elimina muchos puntos de integración de
   intercambio de información y actividades de reporte que consumen mucho tiempo.
 
+  5. Procesos y Escalabilidad
 
+  Los usuarios están en control de toda su información y transferencias lo que
+  asegura datos de alta calidad, completos, consistentes, a tiempo, precisos y
+  disponibles, haciéndolos durables y confiables. Gracias a la base de datos
+  decentralizada, blockchain no tiene un punto central de falla y está mejor
+  equipada para resistir ataques maliciosos. 
+
+  ![Diagrama de flujo de proceso Blockchain][fig_process_flow_diagram]
+
+  En cualquier red de salud, es necesario asegurar que participantes que
+  colaboren pueden confiar en que cada uno entrega los servicios necesarios que
+  se esperan de ellos. Para lograrlo, tienen que existir medios para asegurar la
+  responsabilidad de tareas y servicios que se espera sean entregados a tiempo y
+  también la asociada penalización si no son entregados a tiempo, en la calidad
+  esperada. Por tanto, cualquier infraestructura tiene que ser capaz de
+  monitorear la información sin inconvenientes, para permitir al Proveedor
+  Primario del servicio evaluar su red. Más aún, a medida que la red crece,
+  estas interacciones entre proveedores de la red incrementa las necesidades de
+  la infraestructura para ser capaz de manejar esta escala.
+
+  El aspecto principal para construír un sitema de gestión de salud altamente
+  escalable y distribuído es con un marco de arquitectura punto-a-punto. Marcos
+  similares han sido usados en varios segmentos de la industria como, medios,
+  deportes, inmuebles, cadenas de proveedores, mostrando que blockchain puede
+  fácilmente ser un conector "add-on" para estructuras centralizadas
+  existentes [#7]. Esto nos ha llevado a explorar el uso de blockchain por su
+  aplicabilidad para permitir un marco punto-a-punto para el sector Salud.
+
+  Blockchain mantiene la promesa de validar dos o más entidades participantes en
+  una "transacción de salud". Esto provee dos atributos claves al comparar con el
+  modelo de autenticación centralizado. El primero es que las partes interesadas
+  pueden interactuar con los otros a un "nivel transaccional" de "relación de
+  confianza". El segundo es que la exposición de la responsabilidad en una
+  relación de este tipo se limita únicamente al compromiso a "nivel
+  transaccional". Esto es muy útil ya que limita el acceso de información y
+  responsabilidades entre partes involucradas y al mismo tiempo habilita a un
+  participante a entrar en una relación transaccional con un variado número de
+  proveedores basados en sus capacidades específicas y tipos de cuidado
+  entregados al paciente. Esto es significativamente mejor que el sistema
+  convencional centralizado que necesita limitar el número de proveedores para
+  un gran número de necesidades de los pacientes, dado el esfuerzo requerido
+  para administrar el acceso y las responsabilidades.
 
 [#1]: Begoyan, A. "An overview of interoperability standards for
 electronic health records." USA: society for design and process science (2007).
@@ -573,4 +615,7 @@ Information Systems,” in: (1999.).
 //www.access.gpo.gov/nara/cfr/waisidx08/45cfr16408.html. Accessed:2016-08-06..
 
 [fig_estructura_patientory]: fig_estructura_patientory.png "Estructura de
-Patientory
+Patientory"
+
+[fig_process_flow_diagram]: fig_process_flow_diagram.png "Diagrama de Flujo de
+proceso Blockchain"
