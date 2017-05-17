@@ -546,6 +546,92 @@ Patientory y su interoperabilidad entre pacientes y proveedores
   un gran número de necesidades de los pacientes, dado el esfuerzo requerido
   para administrar el acceso y las responsabilidades.
 
+  6. Intercambio de Información de Salud y Tokens
+
+  El token Patientory (PTOY) es el combustible que mantiene la infraestructura
+  blockchain. El uso principal del token es la regulación de los recursos de
+  almacenamiento de la red, las mediciones de calidad de la salud y los ciclos
+  de pagos de ganancias.
+
+  A los pacientes se les asigna una cantidad de espacio para guardar información
+  gratis en la red Patientory. PTOY les permite comprar espacio extra ubicado en
+  nodos configurados en los sistemas de los hospitales. PTOY puede ser comprado
+  en la plataforma o en un intercambio.
+
+  Las organizaciones de salud usan PTOY en este caso también. Se usa igualmente
+  en pagos una vez que se ejecutan los contratos inteligentes con companías de
+  seguros de salud y sirve como mecanismo para regular las métricas del modelo
+  basado en valor. 
+
+  Para lograr que los EEUU cambien exitosamente de un modelo basado en
+  pago-por-servicio al modelo basado en valor, tiene que existir una
+  infraestructura que permita a las organizaciones vincular calidad, valor y
+  eficacia de las intervenciones médicas a través de un modelo de compensación
+  acreditado.
+
+  La compensación se basará en qué tan efectivo es el trabajo en conjunto de la
+  red de proveedores en asegurarse que hay una mejora en la calidad del cuidado
+  y en el bienestar del paciente, al mismo tiempo que se reduce el costo
+  asociado al cuidado. Para incentivar verdaderamente a los diferentes
+  participantes en la red a crear pro-activamente mejores regimenes de cuidado,
+  una compensación basada en méritos de los ahorros compartidos (reembolsos)
+  debe aplicarse. Para lograr efectivamente separar una parte proporcionada al
+  proveedor en la red que contribuyó mayormente hacia los ahorros en general, un
+  seguimiento claro de su contribución es medible por medio de contratos
+  inteligentes en la red blockchain.
+
+  Otro impacto clave del nuevo paradigma de salud es el modelo de compensación
+  donde los proveedores son elegibles de recibir compensación adicional al
+  cuidado entregado. Esta compensación es el resultado de los ahorros que son
+  generados basados en qué tan efectivos son los proveedores en administrar el
+  cuidado y los resultados de la salud del paciente (incentivos). Cualquier
+  ahorro generado por la gestión efectiva del cuidado del paciente puede ser
+  mantenida por los proveedores y su red de asociados como parte de los
+  ahorros compartidos del nuevo paradigma de salud. 
+
+  Nuestra propuesta posibilita la habilidad de los pagadores a transferir
+  tokens como incentivos a los proveedores que logren esas métricas de calidad.
+  La habilidad de verificar fácilmente y administrar contratos inteligentes en
+  los que los beneficios pueden ser redimidos con facilidad significativa provee
+  la necesaria "zanahoria" para que los proveedores y pacientes interactúen en
+  una colaboración simbiótica. En forma contraria, si uno o más participantes
+  falla, penalidades apropiadas, por medio de las responsabilidades, pueden ser
+  determinadas con igual facilidad. Esta aproximación "zanahoria / palo"
+  proveerá el empuje necesario para cambiar la industria de una mentalidad de
+  gestión de la enfermedad a una mentalidad del control del bienestar.
+
+  Por esto, los tokens PTOY expedidos por Patientory, son el token nativo para
+  usar en la plataforma Patientory. A cambio de los tokens PTOY, los usuarios
+  serán capaces de usar la red para alquilar espacio de almacenamiento para
+  información de salud, y para ejecutar pagos y transacciones de contratos
+  inteligentes específicos. 
+
+  Creemos firmemente que usar un token es el mejor sistema de pagos para
+  soportar la infraestructura en el futuro visible. Este futuro es un vibrante
+  ecosistema de muchos tokens, para los cuales el sistema de salud necesitará
+  crear sistema de pagos cerrado. El resultado será un ciclo de
+  retroalimentación positiva para la gestión eficiente del cuidado, con
+  disminución significativa en los miles de millones de dólares atribuídos
+  actualmente a pérdidas por fraude al sistema de salud[#4].
+
+  El sistema también incentiva aquellas organizaciones grandes con capacidad de
+  almacenamiento a cambiar tokens con organizaciones más pequeñas o medianas que
+  van a necesitar acceso directo a la red blockchain sin implementar un nodo
+  directamente. Aunque las políticas del nuevo sistema de salud proveen el
+  potencial para incentivar a los proveedores a trabajar juntos para mejorar los
+  métodos de cuidado del paciente, las arquitecturas actuales de EHR no pueden
+  habilitar esta capacidad, por tanto, simplemente con la entrega o recepción de
+  tokens se facilita este proceso.
+
+  Por esto, el valor de los tokens está atado al volúmen de transacciones que se
+  ejecuten en la red. A medida que la red de Patientory aumenta constantemente
+  en transacciones de tokens, la demanda de tokens se incrementa, resultando en
+  un valor incrementado.
+
+  ![Valor del Token Patientory en función de las transacciones][fig_token_value]
+
+
+
 [#1]: Begoyan, A. "An overview of interoperability standards for
 electronic health records." USA: society for design and process science (2007).
 
@@ -619,3 +705,6 @@ Patientory"
 
 [fig_process_flow_diagram]: fig_process_flow_diagram.png "Diagrama de Flujo de
 proceso Blockchain"
+
+[fig_token_value]: fig_token_value_function_of_transactions.png "Valor del Token Patientory en
+función de las transacciones"
